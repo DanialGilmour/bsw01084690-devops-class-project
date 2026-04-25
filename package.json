@@ -4,7 +4,8 @@
   "description": "Simple Express app for DevOps assignment",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "build": "echo \"Build completed successfully\""
   },
   "dependencies": {
     "express": "^4.19.2"
