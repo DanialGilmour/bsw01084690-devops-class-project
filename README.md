@@ -13,16 +13,16 @@ This project demonstrates a complete DevOps lifecycle for a Node.js web applicat
 
 ## Application Features
 The web application is built with Express.js and includes:
-* `/`: Returns "Hello DevOps" [cite: 5, 155]
-* `/health`: Status check endpoint [cite: 5]
+* `/`: Returns "Hello DevOps" 
+* `/health`: Status check endpoint 
 
 ## Pipeline Stages
 The `Jenkinsfile` defines the following automated workflow:
-1. **Clone:** Pulls the latest code from this repository[cite: 9, 333].
-2. **Build:** Installs dependencies using `npm install` and executes `npm run build`[cite: 46, 171, 172].
-3. **Test:** Placeholder for SonarQube/Unit testing[cite: 173, 174].
-4. **Docker Build:** Creates a container image tagged as `student-app`[cite: 9, 47, 338].
-5. **K8s Deploy:** Applies Kubernetes manifests to the cluster[cite: 48, 339, 348].
+1. **Clone:** Pulls the latest code from this repository.
+2. **Build:** Installs dependencies using `npm install` and executes `npm run build`.
+3. **Test:** Placeholder for SonarQube/Unit testing.
+4. **Docker Build:** Creates a container image tagged as `student-app`.
+5. **K8s Deploy:** Applies Kubernetes manifests to the cluster.
 
 ## Deployment Instructions
 ### Local Setup
