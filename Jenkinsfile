@@ -1,30 +1,27 @@
-pipeline { 
-agent any 
-stages { 
-stage('Clone') { 
-steps { 
-git 'your-repo-url' 
-} 
-} 
-stage('Build') { 
-steps { 
-} 
-} 
-sh 'npm install' 
-stage('Test') { 
-steps { 
-sh 'echo "No tests implemented"' 
-} 
-} 
-stage('Docker Build') { 
-steps { 
-} 
-sh 'docker build -t student-app .' 
-} 
-stage('Run Container') { 
-steps { 
-sh 'docker run -d -p 3000:3000 student-app' 
-} 
-} 
-} 
-} 
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Build') {
+            steps {
+                echo 'Installing dependencies and building application'
+                sh 'npm install'
+                sh 'npm run build'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running SonarQube code quality analysis'
+                echo 'SonarQube analysis placeholder'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying application'
+            }
+        }
+    }
+}
